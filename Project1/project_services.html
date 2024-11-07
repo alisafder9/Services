@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Services</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                user-select: none;
+            }
+
+            body{
+                font-family: 'arial', 'sans-serif';
+                background-color: #f4f4f4;
+                color: #333;
+            }
+
+            header{
+                background-color: #005F73;
+                color: white;
+                padding: 15px 0;
+            }
+
+            .header-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            header h1{
+                margin-left: 20px;
+            }
+
+            .burger-menu{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                right: 20px;
+            }
+
+            nav{
+                display: none;
+            }
+
+            .action{
+                display: block;
+            }
+            nav ul{
+                list-style: none;
+                display: flex;
+            }
+
+            nav ul li{
+                margin-right: 20px;
+            }
+
+            nav ul li a{
+                text-decoration: none;
+                position: relative;
+                right: 30px;
+                color: white;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+
+            nav ul li a:hover{
+                background-color: #7aa0a7f6;
+            }
+
+            .menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                width: 30px;
+                height: 24px;
+                position: relative;
+            }
+
+            .menu span{
+                background-color: white;
+                height: 4px;
+            }
+
+            #hero{
+               background-image: url('oXrLmSl.jpeg');
+               background-size: cover;
+               background-position: center;
+               height: 400px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+               color: white;
+            }
+
+            .hero-content{
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+            }
+
+            .hero-content h2{
+                margin-bottom: 20px;
+            }
+
+            .hero-button{
+                display: inline-block;
+                background-color: #EE6C4D;
+                margin-top: 20px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                transition: background-color 0.3s;
+            }
+
+            .hero-button:hover{
+                background-color: #d64b2a;
+            }
+
+            #services{
+                background-color: white;
+                padding: 20px;
+                text-align: left;
+            }
+
+            #services h2{
+                color: blue;
+                margin-bottom: 15px;
+            }
+
+            #services ul{
+                list-style-type: circle;
+                margin-left: 50px;
+                margin-top: 10px;
+            }
+
+            #services ul li{
+                margin-bottom: 10px;
+            }
+
+            #about{
+                background-color: #F0F0F0;
+                padding: 20px;
+                text-align: left;
+            }
+
+            #about h2{
+                color: green;
+                margin-bottom: 15px;
+            }
+
+            #contact{
+                background-color: white;
+                padding: 20px;
+            }
+
+            #contact h2{
+                color: red;
+                margin-bottom: 15px;
+            }
+
+            #contact p{
+                margin-bottom: 10px;
+            }
+
+            footer{
+                background-color: #005F73;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+
+            @media screen and (max-width: 800px) {
+                #services, #contact, #about {
+                    text-align: center;
+                }
+                #services ul{
+                    list-style-type: none;
+                    padding: 0;
+                }
+                header h1{
+                    margin-left: 5px;
+                }
+                .burger-menu{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .menu{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    align-content: center;
+                }
+                nav{
+                    position: absolute;
+                    top: 90px;
+                    background-color: #005F73;
+                    width: 100px;
+                }
+                nav ul{
+                  display: block;
+                }
+                
+                nav ul li{
+                    margin-bottom: 20px;
+                }
+                
+               nav ul li a{
+                   position: relative;
+                   left: 5px;
+               }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <div class="header-content">
+            <h1>Our Business Name</h1>
+            <div class="burger-menu"><nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
+            </div>
+        </header>
+        
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Welcome to Our Business</h2>
+                <p>Your one-step solution for all your needs</p>
+                <a href="#contact" class="hero-button">Get in Touch</a>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to help your Business
+                grow:
+            </p>
+            <ul>
+                <li>Consulting Services</li>
+                <li>Professiona Training</li>
+                <li>Marketing and Advertising Solutions</li>
+            </ul>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>We are a dedicated team with over 10 years of experience 
+                in business development and management. Our mission is to 
+                provide high-quality services tailored to each client's 
+                unique needs.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@ourbusiness.com</p>
+        </section>
+
+        <footer>
+            <p>© 2023 Small Business. All rights reserved.</p>
+        </footer>
+        <script src="/jquery.js"></script>
+        <script>
+            function toggleMenu(){
+                $("nav").toggle('action');
+                // we can use slide(up,down,toggle,in,out) and fade(in, out, toggle) 
+                // and duration like slow fast and time setting 1000=1s
+                $("nav").slideIn(2000);
+                $("nav").slideOut(2000);
+            }
+        </script>
+    </body>
+</html>
